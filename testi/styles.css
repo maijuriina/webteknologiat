@@ -1,0 +1,14 @@
+body {
+    height: 100vh;
+    background-image: linear-gradient( to bottom, #fcc471, #ff962c);
+}
+
+
+
+a:hover {
+    color: rgb(48, 40, 29);
+}
+
+a:active {
+    color: brown;
+}
