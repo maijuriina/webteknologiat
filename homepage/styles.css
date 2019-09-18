@@ -1,0 +1,176 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: whitesmoke;
+    font-family: 'Calibri Light';
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+#content {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrapper {
+    padding-bottom: 30px;
+}
+
+header {
+    width: 100vw;
+    height: 40px;
+    font-size: 30px;
+    line-height: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    background-image: linear-gradient( to right, #fcc471, #d35f8d);
+}
+
+h1 {
+    font-size: 25px;
+    margin: 5px;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 5px;
+}
+
+h3 {
+    font-size: 18px;
+    margin: 5px;
+}
+
+main {
+    width: 100vw;
+    text-align: center;
+    align-content: center;
+}
+
+section {
+    width: 50%;
+    display: inline-block;
+    padding: 20px;
+    background-color: #fcc471;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+aside {
+    width: 200px;
+    display: inline-block;
+    left: 0;
+    padding: 15px;
+    position: absolute;
+    margin-left: 45px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #fcc471;
+}
+
+#ul-nav {
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color: whitesmoke;
+    border-bottom: solid 2px #F19C7F;
+}
+
+#li-nav a {
+    float: left;
+    height: 50px;
+    width: 33.33%;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    line-height: 50px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+#li-nav a:hover {
+    background-color: #F19C7F;
+    }
+
+#li-nav a:active {
+    background-color: #d35f8d;
+    color: black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%
+}
+
+th, td {
+    width: 33%;
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #F19C7F;
+}
+
+tr:hover {
+    background-color: #F19C7F;
+}
+
+#head {
+    background-color: #d35f8d;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0% {background-color: #F19C7F;}
+    50% {background-color: #d35f8d;}
+    100% {background-color: #F19C7F;}
+}
+
+footer {
+    width: 100vw;
+    height: 40px;
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    line-height: 40px;
+    background-image: linear-gradient( to right, #fcc471, #d35f8d);
+}
+
+ul {
+    align-items: left;
+}
+
+li {
+    list-style: fill circle;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: #c83771;
+}
+
+input[type=text] {
+    width: 70%;
+    height: 30px;
+    font-size: 15px;
+    color: #c83771;
+    text-align: center;
+    border: none;
+}
+
+input[type=submit] {
+    width: 50%;
+    height: 30px;
+    background-color: #d35f8d;
+    border-bottom: 2px solid #c83771;
+    border-right: 2px solid #c83771;
+    border-top: 2px solid #F19C7F;
+    border-left: 2px solid #c83771;
+    cursor: pointer;
+}
