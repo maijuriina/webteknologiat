@@ -4,7 +4,11 @@ html, body {
 }
 
 body {
-    background-color: whitesmoke;
+    background-image: url(images/flamey-icon-transparent.png);
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position-x: 180%;
+    background-position-y: 40%;
     font-family: 'Calibri Light';
     width: 100vw;
     overflow-x: hidden;
