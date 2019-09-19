@@ -5,9 +5,9 @@ html, body {
 
 body {
     background-image: url(images/flamey-icon-transparent.png);
-    background-size: 130%;
+    background-size: 170%;
     background-repeat: no-repeat;
-    background-position-x: 250%;
+    background-position-x: 200%;
     background-position-y: 50%;
     font-family: 'Calibri Light';
     width: 100vw;

@@ -6,10 +6,10 @@ html, body {
 body {
     background-image: url(images/flamey-icon-transparent.png);
     background-size: 100%;
+    background-position-y: -100%;
     background-repeat: no-repeat;
     font-family: 'Calibri Light';
     width: 100vw;
-    overflow-x: hidden;
 }
 
 header {
