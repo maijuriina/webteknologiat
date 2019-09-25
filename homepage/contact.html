@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" media="screen and (min-width: 900px)" href="styles.css">
-    <link rel="stylesheet" media="screen and (max-width: 800px)" href="narrow-styles.css"> 
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="css/styles.css">
+    <link rel="stylesheet" media="screen and (max-width: 800px)" href="css/narrow-styles.css"> 
     <link rel="icon" type="image/png" href="images/flamey-icon-transparent.png">
     <title>Kotisivu - Yhteystiedot</title>
 </head>
@@ -29,6 +29,20 @@
                 Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
             </p>
             <p>Lähetäthän meille <a href="mailto: abckissakavelee@tikapuita.com">sähköpostia</a>!</p>
+            <h2>Hae osoite kartalta!</h2>
+            <p>Katuosoite:</p>
+            <input type='text' id='address'>
+            <p>Kaupunki:</p>
+            <input type='text' id='city'>
+            <br><br>
+            <input type='button' value='Hae osoite' id='show' onclick="findAddress()">
+            <br><br>
+            <div class="mapouter">
+                <div class="gmap_canvas">
+                    <iframe width="100%" height="400px" id="gmap_canvas" 
+                    src="" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                </div>
+            </div>
         </section>
             
         <section>
@@ -38,8 +52,20 @@
                 Etunimi<br><input type="text"><br><br>
                 Sukunimi<br><input type="text"><br><br>
                 Email<br><input type="text"><br><br>
-                <input type="submit">
+                <input type='button' value='Lähetä viesti konsoliin!' onclick='writeLines();'/>
             </form>
+            <br>
+            <br>
+            <input type='text' id='txt'>
+            <br>
+            <br>
+            <input type='button' value='Tarkista kirjain!' onclick='checkLetter();'/>
+            <br>
+            <br>
+            <input type='text' id='nmbr'>
+            <br>
+            <br>
+            <input type='button' value='Tarkista luku!' onclick='checkNumber();'/>
         </section>
 
         </main>
@@ -47,5 +73,6 @@
         <footer>&copy; Sivun Haltija</footer>
     </div>
     </div>
+    <script src="js/demo.js"></script>
 </body>
 </html>

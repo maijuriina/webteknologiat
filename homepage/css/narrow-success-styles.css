@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-    background-image: url(images/flamey-icon-transparent.png);
+    background-image: url(../images/flamey-icon-transparent.png);
     background-size: 100%;
     background-position-y: -100%;
     background-repeat: no-repeat;

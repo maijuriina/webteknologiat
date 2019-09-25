@@ -4,13 +4,14 @@ html, body {
 }
 
 body {
-    background-image: url(images/flamey-icon-transparent.png);
-    background-size: 170%;
+    background-image: url(../images/flamey-icon-transparent.png);
+    background-size: 60%;
     background-repeat: no-repeat;
-    background-position-x: 200%;
-    background-position-y: 50%;
+    background-position-x: 180%;
+    background-position-y: 100%;
     font-family: 'Calibri Light';
     width: 100vw;
+    overflow-x: hidden;
 }
 
 #content {
@@ -50,26 +51,28 @@ h3 {
 
 main {
     width: 100vw;
-    overflow: none;
     text-align: center;
     align-content: center;
 }
 
 section {
-    width: 80%;
+    width: 50%;
     display: inline-block;
-    padding: 10px;
+    padding: 20px;
     background-color: #fcc471;
     margin-bottom: 15px;
     margin-top: 15px;
 }
 
 aside {
-    width: 80%;
+    width: 200px;
     display: inline-block;
-    padding: 10px;
-    margin-bottom: 15px;
+    left: 0;
+    padding: 15px;
+    position: absolute;
+    margin-left: 45px;
     margin-top: 15px;
+    margin-bottom: 15px;
     background-color: #fcc471;
 }
 
@@ -89,7 +92,7 @@ aside {
     width: 33.33%;
     margin: 0;
     padding: 0;
-    font-size: 17px;
+    font-size: 20px;
     line-height: 50px;
     text-decoration: none;
     color: black;
@@ -112,7 +115,7 @@ table {
 
 th, td {
     width: 33%;
-    padding: 5px;
+    padding: 8px;
     text-align: left;
     border-bottom: 1px solid #F19C7F;
 }
@@ -174,4 +177,20 @@ input[type=submit] {
     border-top: 2px solid #F19C7F;
     border-left: 2px solid #c83771;
     cursor: pointer;
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    margin: auto;
+    display: block;
+    height: 400px;
+    width: 600px;
+}
+    
+.gmap_canvas {
+    overflow: hidden;
+    background: none!important;
+    height: 400px;
+    width: 600px;
 }

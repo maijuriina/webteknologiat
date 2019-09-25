@@ -4,11 +4,11 @@ html, body {
 }
 
 body {
-    background-image: url(images/flamey-icon-transparent.png);
-    background-size: 60%;
+    background-image: url(../images/flamey-icon-transparent.png);
+    background-size: 170%;
     background-repeat: no-repeat;
-    background-position-x: 180%;
-    background-position-y: 100%;
+    background-position-x: 200%;
+    background-position-y: 50%;
     font-family: 'Calibri Light';
     width: 100vw;
     overflow-x: hidden;
@@ -51,28 +51,26 @@ h3 {
 
 main {
     width: 100vw;
+    overflow: none;
     text-align: center;
     align-content: center;
 }
 
 section {
-    width: 50%;
+    width: 80%;
     display: inline-block;
-    padding: 20px;
+    padding: 10px;
     background-color: #fcc471;
     margin-bottom: 15px;
     margin-top: 15px;
 }
 
 aside {
-    width: 200px;
+    width: 80%;
     display: inline-block;
-    left: 0;
-    padding: 15px;
-    position: absolute;
-    margin-left: 45px;
-    margin-top: 15px;
+    padding: 10px;
     margin-bottom: 15px;
+    margin-top: 15px;
     background-color: #fcc471;
 }
 
@@ -92,7 +90,7 @@ aside {
     width: 33.33%;
     margin: 0;
     padding: 0;
-    font-size: 20px;
+    font-size: 17px;
     line-height: 50px;
     text-decoration: none;
     color: black;
@@ -115,7 +113,7 @@ table {
 
 th, td {
     width: 33%;
-    padding: 8px;
+    padding: 5px;
     text-align: left;
     border-bottom: 1px solid #F19C7F;
 }
