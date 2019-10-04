@@ -194,3 +194,9 @@ input[type=submit] {
     height: 400px;
     width: 600px;
 }
+
+.history .history-list {
+    list-style-type: none;
+    width: 90%;
+    text-align: center;
+}

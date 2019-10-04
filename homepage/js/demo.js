@@ -81,4 +81,6 @@ function calcValues(firstValue, secondValue) {
         parseInt(document.getElementById(secondValue).value);
     }
 
+    document.getElementById('history').innerHTML += document.getElementById('result').value + "<br>";
+
 }
