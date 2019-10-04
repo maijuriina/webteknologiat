@@ -22,7 +22,7 @@
         <main>
             <aside><h3>Aside-asiaa</h3>Tämä on aside. Täällä voisi olla <strong>tärkeitä</strong> asioita.</aside>
             
-            <section>
+        <section>
                 <h1>Yhteystiedot</h1>
             <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
                 Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
@@ -35,7 +35,7 @@
             <p>Kaupunki:</p>
             <input type='text' id='city'>
             <br><br>
-            <input type='button' value='Hae osoite' id='show' onclick="findAddress()">
+            <input type='button' value='Hae osoite' id='show' onclick="findLocation()">
             <br><br>
             <div class="mapouter">
                 <div class="gmap_canvas">
@@ -54,20 +54,37 @@
                 Email<br><input type="text"><br><br>
                 <input type='button' value='Lähetä viesti konsoliin!' onclick='writeLines();'/>
             </form>
-            <br>
-            <br>
-            <input type='text' id='txt'>
-            <br>
-            <br>
-            <input type='button' value='Tarkista kirjain!' onclick='checkLetter();'/>
-            <br>
-            <br>
-            <input type='text' id='nmbr'>
-            <br>
-            <br>
-            <input type='button' value='Tarkista luku!' onclick='checkNumber();'/>
         </section>
 
+        <section>
+            <h2>Lisää testailuja!</h2>
+                <!--<input type='text' id='txt'>
+                <br><br>
+                <input type='button' value='Tarkista kirjain!' onclick='checkLetter();'/>
+                <br><br>
+                <input type='text' id='nmbr'>
+                <br><br>
+                <input type='button' value='Tarkista luku!' onclick='checkNumber();'/>
+                <br><br>-->
+                <p>Muuta satunnaisten lukujen arvoa + ja - merkeillä!</p>
+                <p>Alle luodaan satunnaisluku 1-10 väliltä! Voit muuttaa arvoja klikkaamalla +/-</p>
+                <br>
+                <input type='number' id='firstRandom'> 
+                <button id='decrBtn' onclick="decreaseValue('firstRandom')">-</button>
+                <button id='incrBtn' onclick="increaseValue('firstRandom')">+</button><br>            
+                <input type='number' id='secondRandom'>
+                <button id='decrBtn' onclick="decreaseValue('secondRandom')">-</button>
+                <button id='incrBtn' onclick="increaseValue('secondRandom')">+</button><br>
+                <select id="calc-select">
+                    <option value="">Valitse</option>
+                    <option value="addition">+</option>
+                    <option value="subtraction">-</option>
+                    <option value="multiplication">*</option>
+                    <option value="division">/</option>
+                </select>
+                <button id='calculate' onclick="calcValues('firstRandom', 'secondRandom')">Laske</button><br><br>
+                <input type='text' id='result'>
+        </section>
         </main>
 
         <footer>&copy; Sivun Haltija</footer>
