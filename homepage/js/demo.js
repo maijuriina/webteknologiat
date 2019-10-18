@@ -30,12 +30,36 @@ function findLocation() {
     document.getElementById('gmap_canvas').src = src;
 }
 
-window.onload = function() {
+$(function() {
     var src = 'https://www.google.com/maps?q=Kauppakatu1+Lappeenranta&output=embed';
     document.getElementById('gmap_canvas').src = src;
-    document.getElementById('firstRandom').value = getRandomArbitrary(1, 10);
-    document.getElementById('secondRandom').value = getRandomArbitrary(1, 10);
-}
+    var firstOne = getRandomArbitrary(1, 10);
+    $("#firstRandom").val(firstOne);
+    $("#dialogbox").dialog({
+        autoOpen: false
+    });
+    var secondOne = getRandomArbitrary(1, 10);
+    $("#secondRandom").val(secondOne);
+    $("#dialogbox").dialog({
+        autoOpen: false
+    });
+    retrieve = new Values(firstOne, secondOne);
+});
+
+$("#firstRandom").change(function() {
+    let value = $("#firstRandom").val();
+    if (value = undefined || value>10 || value<1) {
+        $("#dialogbox").dialog("open");
+        $("#firstRandom").val(undefined);
+    }
+})
+
+$("#decrBtn").click(function() {
+    let value = $("#firstRandom").val();
+    if (value = undefined || value>10 || value<1) {
+        $("#rangedialogbox").dialog("open");
+    }
+});
 
 
 function getRandomArbitrary(min, max) {
@@ -56,7 +80,32 @@ function increaseValue(randomPlus) {
     } 
 }
 
-function calcValues(firstValue, secondValue) {
+class Values {
+    constructor (firstValue, secondValue) {
+        this.firstValue = firstValue;
+        this.secondValue = secondValue;
+    }
+
+    //Method
+    calcValues() {
+        if (document.getElementById('calc-select').value === 'addition') {
+            document.getElementById('result').value = this.firstValue + this.secondValue;
+        }
+        if (document.getElementById('calc-select').value === 'subtraction') {
+            document.getElementById('result').value = this.firstValue - this.secondValue;
+        }
+        if (document.getElementById('calc-select').value === 'multiplication') {
+            document.getElementById('result').value = this.firstValue * this.secondValue;
+        }
+        if (document.getElementById('calc-select').value === 'division') {
+            document.getElementById('result').value = this.firstValue / this.secondValue;
+        }
+        document.getElementById('history').innerHTML += document.getElementById('result').value + "<br>";
+    }
+    
+}
+
+/*function calcValues(firstValue, secondValue) {
     if (document.getElementById('calc-select').value === 'addition')
     {
         document.getElementById('result').value = parseInt(document.getElementById(firstValue).value) + 
@@ -82,5 +131,4 @@ function calcValues(firstValue, secondValue) {
     }
 
     document.getElementById('history').innerHTML += document.getElementById('result').value + "<br>";
-
-}
+}*/

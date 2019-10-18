@@ -200,3 +200,25 @@ input[type=submit] {
     width: 90%;
     text-align: center;
 }
+
+.cat-pictures {
+    background-color: #F19C7F;
+    border: 2px #F19C7F solid;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.currentImg {
+    height: 500px!important;
+}
+
+.currentName {
+    height: 50px;
+    border: none;
+    background-color: #fcc471;
+    color: black;
+    font-size: 20px;
+    line-height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

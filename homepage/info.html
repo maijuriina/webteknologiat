@@ -7,6 +7,9 @@
     <link rel="stylesheet" media="screen and (max-width: 800px)" href="css/narrow-styles.css"> 
     <link rel="icon" type="image/png" href="images/flamey-icon-transparent.png">
     <title>Kotisivut - Info</title>
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js" 
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body>
     <div id="content">
@@ -67,11 +70,21 @@
                     </tr>
                 </table>
             </section>
-
+            <section>
+                <h2>Erilaisia Sirpoja</h2>
+                <br>
+                <div class="cat-pictures" id="slideshow">
+                    <img class="currentImg" id="currentImg" src=""><br>
+                    <div class="currentName" id="currentName" src=""></div>
+                    <button id="backBtn"><i class="fas fa-step-backward"></i></button>
+                    <button id="ppBtn"><i class="fas fa-play"></i></button>
+                    <button id="forwardBtn"><i class="fas fa-step-forward"></i></button>
+                </div>
+            </section>
             </main>
-
             <footer>&copy; Sivun Haltija</footer>
             </div>
     </div>
+    <script src="js/slideshow.js"></script>
 </body>
 </html>

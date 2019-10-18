@@ -6,11 +6,18 @@
     <link rel="stylesheet" media="screen and (min-width: 900px)" href="css/styles.css">
     <link rel="stylesheet" media="screen and (max-width: 800px)" href="css/narrow-styles.css"> 
     <link rel="icon" type="image/png" href="images/flamey-icon-transparent.png">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/hot-sneaks/jquery-ui.css">
     <title>Kotisivu - Yhteystiedot</title>
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js" 
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="content">
         <div id="content-wrapper">
+            <div id="dialogbox" title="Error">The first value is out of range!</div>
+            <div id="rangedialogbox" title="Error">Range from 1-10!</div>
         <header>Kotisivut</header>
 
         <ul id="ul-nav">
@@ -82,7 +89,7 @@
                     <option value="multiplication">*</option>
                     <option value="division">/</option>
                 </select>
-                <button id='calculate' onclick="calcValues('firstRandom', 'secondRandom')">Laske</button><br><br>
+                <button id='calculate' onclick="retrieve.calcValues()">Laske</button><br><br>
                 <input type='text' id='result'>
                 <h4>Aiemmat tulokset:</h4>
                 <ul class="history">
