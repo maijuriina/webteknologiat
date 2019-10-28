@@ -3,48 +3,54 @@ pictures_array = JSON.parse(pictures_json);
 var i;
 var reeling;
 
+// binding clicks to functions with jquery
+$("#backBtn").on("click", goBack);
+$("#forwardBtn").on("click", goForward);
+$("#ppBtn").on("click", playPause);
 
-$("#currentImg").attr('src', pictures_array[0].src);
-$("#currentName").html(pictures_array[0].name);
+// when page is loaded, autoChange initiates
+$(autoChange());
 
-$(function autoChange() {
-
-    reeling = setTimeout(autoChange, 3000);
-
+// autoChange reels pictures until reeling-value changes
+function autoChange() {
+    reeling = setTimeout(autoChange, 2000);
+    
     if (i<pictures_array.length-1) {
         pictures_array[i++];
-        $("#currentImg").attr('src', pictures_array[i].src);
-        $("#currentName").html(pictures_array[i].name);
     }
     else {
         i = 0;
-        $("#currentImg").attr('src', pictures_array[i].src);
-        $("#currentName").html(pictures_array[i].name);
     }
-});
 
-$("#ppBtn").click(function playPause(){
+    $("#currentImg").attr('src', pictures_array[i].src);
+    $("#currentName").html(pictures_array[i].name);
+};
+
+// checks whether to play or pause autoChange
+function playPause() {
     if (reeling != null) {
         clearTimeout(reeling);
         reeling = null;
+        $("#pp").attr('class', 'fas fa-play');
     }
     else {
-        reeling = setTimeout(autoChange, 3000);
+        $("#pp").attr('class', 'fas fa-pause');
+        reeling = setTimeout(autoChange, 2000);
     }
-});
+};
 
-$("#backBtn").click(function goBack() {
-    if (i>=pictures_array.length-1) {
-        pictures_array[i--];
+function goBack() {
+    if (i==0) {
+        i = pictures_array.length-1;
     }
     else {
-        i = pictures_array.length-1;
+        i--;
     }
     $("#currentImg").attr('src', pictures_array[i].src);
     $("#currentName").html(pictures_array[i].name);
-});
+};
 
-$("#forwardBtn").click(function goForward() {
+function goForward() {   
     if (i<pictures_array.length-1) {
         pictures_array[i++];
     }
@@ -53,4 +59,4 @@ $("#forwardBtn").click(function goForward() {
     }
     $("#currentImg").attr('src', pictures_array[i].src);
     $("#currentName").html(pictures_array[i].name);
-});
+};
