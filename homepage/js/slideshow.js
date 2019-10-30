@@ -1,7 +1,8 @@
-var pictures_json = '[{"name": "Siru makaa","src": "images/Siru makaa.jpg"},{"name": "Siru kerällä","src": "images/Siru kerällä.jpg"}, {"name": "Siru epäilee","src": "images/Siru epäilee.jpg"}]';
+var pictures_json = '[{"name": "Siru makaa","src": "images/Siru makaa.jpg"},{"name": "Siru kerällä","src": "images/Siru kerällä.jpg"}, {"name": "Siru epäilee","src": "images/Siru epäilee.jpg"}, {"name": "Siru auttaa opiskelussa","src": "images/Siru auttaa opiskelussa.jpg"}, {"name": "Siru köllöttää","src": "images/Siru köllöttää.jpg"}, {"name": "Siru matolla","src": "images/Siru matolla.jpg"}]';
 pictures_array = JSON.parse(pictures_json);
 var i;
 var reeling;
+var savedI = "index";
 
 // binding clicks to functions with jquery
 $("#backBtn").on("click", goBack);
@@ -13,7 +14,10 @@ $(autoChange());
 
 // autoChange reels pictures until reeling-value changes
 function autoChange() {
-    reeling = setTimeout(autoChange, 2000);
+
+    reeling = setTimeout(autoChange, 2500);
+
+    i = localStorage.getItem(savedI);
     
     if (i<pictures_array.length-1) {
         pictures_array[i++];
@@ -22,8 +26,11 @@ function autoChange() {
         i = 0;
     }
 
-    $("#currentImg").attr('src', pictures_array[i].src);
-    $("#currentName").html(pictures_array[i].name);
+    $("#currentImg").fadeTo(500, 0, function() {
+        $("#currentImg").attr('src', pictures_array[i].src);
+        $("#currentName").html(pictures_array[i].name);
+    }).fadeTo(1500, 1);
+    localStorage.setItem(savedI, i);
 };
 
 // checks whether to play or pause autoChange
@@ -35,7 +42,7 @@ function playPause() {
     }
     else {
         $("#pp").attr('class', 'fas fa-pause');
-        reeling = setTimeout(autoChange, 2000);
+        reeling = setTimeout(autoChange, 2500);
     }
 };
 
@@ -46,8 +53,11 @@ function goBack() {
     else {
         i--;
     }
-    $("#currentImg").attr('src', pictures_array[i].src);
-    $("#currentName").html(pictures_array[i].name);
+    localStorage.setItem(savedI, i);
+    $("#currentImg").fadeTo(500, 0, function() {
+        $("#currentImg").attr('src', pictures_array[i].src);
+        $("#currentName").html(pictures_array[i].name);
+    }).fadeTo(1500, 1);
 };
 
 function goForward() {   
@@ -57,6 +67,10 @@ function goForward() {
     else {
         i = 0;
     }
-    $("#currentImg").attr('src', pictures_array[i].src);
-    $("#currentName").html(pictures_array[i].name);
+    localStorage.setItem(savedI, i);
+
+    $("#currentImg").fadeTo(500, 0, function() {
+        $("#currentImg").attr('src', pictures_array[i].src);
+        $("#currentName").html(pictures_array[i].name);
+    }).fadeTo(1500, 1);
 };
