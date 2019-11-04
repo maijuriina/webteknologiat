@@ -232,6 +232,7 @@ button:focus {
 
 .fBtn, .bBtn, .pBtn {
     cursor: pointer;
+    border-radius: 5px;
     background-color: #d35f8d;
     border: none;
     padding: 10px;
@@ -242,13 +243,45 @@ button:focus {
     border: none;
 }
 
+.pictureContainer {
+    width: 100%;
+    align-content: center;
+}
+
 .pictureGrid {
     display: grid;
-    grid-gap: 5px;
-    grid-template-columns: 100px 100px 100px;
-    background-color: #fff;
+    grid-gap: 8px;
+    grid-template-columns: auto auto auto;
+    grid-auto-flow: dense;
     color: #444;
 }
 
+.catPic {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.box {
+    background-color: #ffffff;
+    color: #fff;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 150%;
+}
+
+.viewSwitchBtn {
+    float: right;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #d35f8d;
+    border: none;
+    padding: 10px;
+}
+
+.viewSwitchBtn:hover {
+    background-color: #c83771;
+    border: none;
+}
 
 

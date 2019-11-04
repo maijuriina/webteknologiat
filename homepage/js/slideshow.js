@@ -3,11 +3,14 @@ pictures_array = JSON.parse(pictures_json);
 var i;
 var reeling;
 var savedI = "index";
+var catPic;
+var switchMode = false;
 
 // binding clicks to functions with jquery
 $("#backBtn").on("click", goBack);
 $("#forwardBtn").on("click", goForward);
 $("#ppBtn").on("click", playPause);
+$("#viewSwitchBtn").on("click", switchView);
 
 // when page is loaded, autoChange initiates
 $(autoChange());
@@ -74,3 +77,23 @@ function goForward() {
         $("#currentName").html(pictures_array[i].name);
     }).fadeTo(1500, 1);
 };
+
+// using jQuery for looping through images, creating div for each element
+$(pictures_array.forEach(
+    function (element) {
+    $('.pictureGrid').append('<div class="box"><img class="catPic" id="catPic" src="'+ element.src +'"></div>'); 
+    })
+);
+
+function switchView() {
+    if (switchMode == false) {
+        $(".pictureGrid").css('display', 'block');
+        switchMode = true;
+    }
+    else {
+        $(".pictureGrid").css('display', 'grid');
+        switchMode = false;
+    }
+};
+
+
