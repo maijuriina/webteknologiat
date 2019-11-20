@@ -284,4 +284,43 @@ button:focus {
     border: none;
 }
 
+#alarmBtn {
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #d35f8d;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+}
 
+#alarmBtn:hover {
+    background-color: #c83771;
+    border: none;
+}
+
+#clockContainer {
+    height: 100px;
+    margin: 20px;
+}
+
+#digitalClock {
+    height: 40px;
+    background-color: #F19C7F;
+    line-height: 40px;
+    font-size: 20px;
+    margin: 20px;
+}
+
+input[type=time] {
+    width: 90px;
+}
+
+#btn {
+    background-color: #F19C7F;
+    height: 50px;
+    border-radius: 15px;
+}
+
+#btn:hover {
+    background-color: #d35f8d;
+}

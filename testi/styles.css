@@ -1,9 +1,37 @@
-body {
+html {
     height: 100vh;
-    background-image: linear-gradient( to bottom, #fcc471, #ff962c);
+    padding: 0;
+    margin: 0;
 }
 
+body {
+    background-image: linear-gradient( to bottom, #fcc471, #ff962c);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10%;
+}
 
+header {
+    font-size: 20px;
+    width: 100vw;
+    border: solid 1px black;
+}
+
+h1 {
+    font-size: 15px;
+}
+
+main {
+    width: 100%;
+}
+
+section {
+    height: 400px;
+    width: 200px;
+    border: solid 1px black;
+    padding: 10px;
+    margin: auto;
+    display: inline-block;
+}
 
 a:hover {
     color: rgb(48, 40, 29);
@@ -11,4 +39,13 @@ a:hover {
 
 a:active {
     color: brown;
+}
+
+footer {
+    margin: 0;
+    padding-left: 0;
+    bottom: 0;
+    width: 100vw;
+    overflow-x: 0;
+    position: absolute;
 }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="css/styles.css">
+    <link rel="stylesheet" media="screen and (max-width: 800px)" href="css/narrow-styles.css">   
+    <link rel="icon" type="image/png" href="images/flamey-icon-transparent.png">
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js" 
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <title>Kotisivu - Ajax</title>
+</head>
+<body>
+    <div id="content">
+        <div id="content-wrapper">
+        <header>Ajax</header>
+        <ul id="ul-nav">
+            <li id="li-nav"><a href=index.html>Etusivu</a></li>
+            <li id="li-nav"><a href=info.html>Lisätietoja</a></li>
+            <li id="li-nav"><a href=contact.html>Yhteystiedot</a></li>
+        </ul>
+   <main>          
+        <section>
+            <h2>Mitäs täällä tapahtuu?</h2>
+            <div id="loading">
+                <img src='images/ajax-loader.gif'>
+            </div>
+            <div id="divBtn">
+                <button id="btn">Hae tiedot</button>
+            </div>
+            <div id="numbersInfo"></div>
+        </section>   
+        </main>
+
+        <footer>&copy; Sivun Haltija</footer>
+        </div>
+    </div>
+    <script src="js/ajaxcode.js"></script>
+</body>
+</html>
