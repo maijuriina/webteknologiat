@@ -6,8 +6,7 @@
     <link rel="stylesheet" media="screen and (min-width: 900px)" href="css/styles.css">
     <link rel="stylesheet" media="screen and (max-width: 800px)" href="css/narrow-styles.css">   
     <link rel="icon" type="image/png" href="images/flamey-icon-transparent.png">
-    <script src="http://code.jquery.com/jquery-3.4.1.min.js" 
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
     <title>Kotisivu - Ajax</title>
@@ -21,14 +20,15 @@
             <li id="li-nav"><a href=info.html>Lisätietoja</a></li>
             <li id="li-nav"><a href=contact.html>Yhteystiedot</a></li>
         </ul>
-   <main>          
+   <main>
+       <aside></aside>
         <section>
-            <h2>Mitäs täällä tapahtuu?</h2>
+            <h2 id="ajaxheader">Numerofaktoja!</h2>
             <div id="loading">
                 <img src='images/ajax-loader.gif'>
             </div>
             <div id="divBtn">
-                <button id="btn">Hae tiedot</button>
+                <button id="btn">Hae fakta</button>
             </div>
             <div id="numbersInfo"></div>
         </section>   

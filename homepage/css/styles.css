@@ -316,11 +316,21 @@ input[type=time] {
 }
 
 #btn {
-    background-color: #F19C7F;
+    background-color: #FFFFFF;
     height: 50px;
     border-radius: 15px;
 }
 
 #btn:hover {
     background-color: #d35f8d;
+}
+
+#loading {
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+#ajaxheader {
+    padding: 10px;
 }
