@@ -1,27 +1,50 @@
 var index;
 var numbersUrl = 'http://numbersapi.com/random/trivia';
+var jokesUrl = 'http://api.icndb.com/jokes/random/1';
 
-$(document).ready(function () {
-    $("#loading").hide();
+$(function () {
+    $("#loadingFact").hide();
+    $("#loadingJoke").hide();
     index = 0;
 })
 
-$("#btn").click(function () {
-    $("#loading").show();
+$("#factFetch").click(function () {
+    $("#loadingFact").show();
 
     $.ajax({
         type: "GET",
         url: numbersUrl,
         dataType: "text",
         success: function (response) {
-            $("#loading").hide();
+            $("#loadingFact").hide();
             $("#numbersInfo").append("<br><br>" + "<i>" + response + "</i>");
             index++;
-            $("aside").html("Laskuri: "+ index);
+            $("aside").html("Faktalaskuri: "+ index);
         },
         error: function (errorResponse) {
-            $("#loading").hide();
-            console.log("Error msg");
+            $("#loadingFact").hide();
+            console.log(errorResponse);
         }
     });
 });
+
+$("#jokeFetch").click(function () {
+    $("#loadingJoke").show();
+
+    $.ajax({
+        type: "GET",
+        url: jokesUrl,
+        dataType: "json",
+        success: function (response) {
+            $("#loadingJoke").hide();
+            // $.each on sama kuin for-loop
+            $.each( response.value, function (index, jokeObject) {
+                $("#jokeDisplay").append("<br><br>" + "<i>" + jokeObject.joke + "</i>");
+            })
+        }, error: function (errorResponse) {
+            $("#loadingJoke").hide();
+            console.log(errorResponse);
+        }
+    })
+})
+

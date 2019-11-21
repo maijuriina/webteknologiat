@@ -315,22 +315,23 @@ input[type=time] {
     width: 90px;
 }
 
-#btn {
+.btn {
     background-color: #FFFFFF;
     height: 50px;
     border-radius: 15px;
 }
 
-#btn:hover {
-    background-color: #d35f8d;
+.btn:hover {
+    background-color: #c2c2c2;
 }
 
-#loading {
-    display: block;
-    margin: auto;
-    padding: 10px;
+#loadingFact, #loadingJoke {
+    display: inline-block;
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 5px;
 }
 
-#ajaxheader {
+#ajaxHeader {
     padding: 10px;
 }
