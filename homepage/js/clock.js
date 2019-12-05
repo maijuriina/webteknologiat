@@ -28,7 +28,6 @@ $("#alarmBtn").click(function() {
   } else {
     alarm.loop = false;
     playing = false;
-    alarmFlash().stop(true, true);
   }
 });
 
@@ -79,9 +78,6 @@ function clock() {
       if (playing) {
         alarm.play();
         alarm.loop = true;
-        if (playing) {
-          alarmFlash();
-        }
       }
     }
 

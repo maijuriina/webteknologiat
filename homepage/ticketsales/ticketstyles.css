@@ -1,0 +1,94 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+body {
+    background-color: white;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    width: 100vw;
+}
+
+header {
+    padding-top: 5px;
+    padding-bottom: 0;
+}
+
+h3 {
+    padding: 5px;
+}
+
+.allContainer {
+    margin: auto;
+    display: block;
+    width: 50vw;
+    height: 100vh;
+    text-align: center;
+    background-image: url(../images/maatalousWeb.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 15px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.priceCategory {
+    height: 20%;
+}
+
+p {
+    padding: 5px;
+    margin: 0;
+}
+
+.fieldName {
+    padding: 5px;
+    margin: 0;
+    font-size: 100%;
+}
+
+input[type=text], input[type=number] {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 30%;
+    height: 30px;
+    text-align: center;
+    color: #88aa00;
+    border: 1px solid #88aa00;
+    border-radius: 5px;
+}
+
+label {
+    font-size: 90%;
+}
+
+.boxContainer {
+    padding: 10px;
+}
+  
+  /* On mouse-over, add a green background color
+  .container:hover input ~ .checkmark {
+    /*background-color: #CCFF00;
+  }
+  
+  When the checkbox is checked, add a blue background 
+  .container input:checked ~ .checkmark {
+    background-color: #88aa00;
+  }*/
+  
+
+footer {
+    bottom: 0;
+    width: 50vw;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+}

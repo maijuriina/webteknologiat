@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" media="screen and (min-width: 900px)" href="css/styles.css">
+    <link rel="stylesheet" media="screen and (max-width: 800px)" href="css/narrow-styles.css"> 
+    <link rel="icon" type="image/png" href="images/flamey-icon-transparent.png">
+    <title>Kotisivut - Info</title>
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js" 
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+    <div id="content">
+            <div id="content-wrapper">
+            <header>Lisenssi</header>
+
+            <ul id="ul-nav">
+                <li id="li-nav"><a href=index.html>Etusivu</a></li>
+                <li id="li-nav"><a href=info.html>Lisätietoja</a></li>
+                <li id="li-nav"><a href=contact.html>Yhteystiedot</a></li>
+            </ul>
+
+            <main>
+            <section>
+                <h1>Lisenssiavain</h1>
+                <p>Kirjoita lisenssiavain!</p>
+                    <form>
+                        <input class="licenseBox" type="text" maxlength=4 id="startBox">-<input class="licenseBox" type="text" maxlength=4 id="midBox">-
+                        <input class="licenseBox" type="text" maxlength=4 id="endBox"><br><br>
+                        <button id="resetBtn">Reset</button>
+                    </form>
+            </section>
+            </main>
+            <footer>&copy; Sivun Haltija</footer>
+            </div>
+    </div>
+    <script src="js/license.js"></script>
+</body>
+</html>
