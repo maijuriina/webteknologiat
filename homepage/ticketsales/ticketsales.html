@@ -20,20 +20,30 @@
     <h3>04.07.2019 | Taipalsaari</h3>
     <main>
         <section>
-            <form>
-                <h4>Hanki lippusi nyt!</h4>
+            <form id="ticketForm">
+                <h4>Lipun tiedot</h4>
                 <p class="fieldName">Olen..</p>
                 <div class="boxContainer">
-                    <input type="checkbox" id="MTKmember" name="MTKmember"><label for="MTKmember">MTK:n jäsen</label>
-                    <input type="checkbox" id="conscript" name="conscript"><label for="conscript">Varusmies</label>
-                    <input type="checkbox" id="student" name="student"><label for="student">Opiskelija</label>
+                    <input type="checkbox" id="MTKmember" name="MTKmember" onclick="boxControl()"><label for="MTKmember">MTK:n jäsen</label>
+                    <input type="checkbox" id="conscript" name="conscript" onclick="boxControl()"><label for="conscript">Varusmies</label>
+                    <input type="checkbox" id="student" name="student" onclick="boxControl()"><label for="student">Opiskelija</label>
                 </div>
-                <p class="fieldName">Etunimi</p><input type="text"><br>
-                <p class="fieldName">Sukunimi</p><input type="text"><br>
-                <p class="fieldName">Ikä</p><input type="number"><br>
-                <p class="fieldName">Sähköposti</p><input type="text"><br><br>
+                <p class="fieldName">Etunimi</p><input id="firstName" type="text"><br>
+                <p class="fieldName">Sukunimi</p><input id="lastName" type="text"><br>
+                <p class="fieldName">Ikä</p><input id="age" type="number"><br>
+                <p class="fieldName">Sähköposti</p><input id="email" type="text"><br><br>
             </form>
-            <div class="priceCategory"></div>
+            <button class="getData">Hanki lippu!</button>
+            <button class="info"><i class="fas fa-question"></i></button>
+        </section>
+        <br>
+        <section>
+            <div class="ticketDisplay">
+                <h4>Hanki lippusi nyt!</h4>
+                <span class="ticketFirstName"></span>
+                <span class="ticketLastName"></span>
+                <p>Hinta: <span class="priceCategory"></span></p>
+            </div>
         </section>
     </main>
     <footer>&copy; Mustonen</footer>
