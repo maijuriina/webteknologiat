@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="icon" type="image/png" href="images/flamey-icon-transparent.png"> -->
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" media="screen and (min-width: 900px)" href="../ticketsales/ticketstyles.css">
+    <link rel="stylesheet" media="screen and (max-width: 1025px)" href="../ticketsales/narrow-ticketstyles.css">
     <script src="http://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -16,39 +16,46 @@
 
 <body>
     <div class="allContainer">
-        <div class="footerContainer">
-    <header><h1>Maatalousnäyttely</h1></header>
-    <h3>04.07.2019 | Taipalsaari</h3>
-    <main>
-        <section>
-            <form id="ticketForm">
-                <h4>Täytä lipun tiedot</h4>
-                <div class="boxContainer">
-                    <input type="checkbox" id="MTKmember" name="MTKmember" onclick="boxControl()"><label for="MTKmember">MTK:n jäsen</label>
-                    <input type="checkbox" id="conscript" name="conscript" onclick="boxControl()"><label for="conscript">Varusmies</label>
-                    <input type="checkbox" id="student" name="student" onclick="boxControl()"><label for="student">Opiskelija</label>
-                </div>
-                <p class="fieldName">Etunimi</p><input id="firstName" type="text"><br>
-                <p class="fieldName">Sukunimi</p><input id="lastName" type="text"><br>
-                <p class="fieldName">Ikä</p><input id="age" type="number"><br>
-                <p class="fieldName">Sähköposti</p><input id="email" type="text"><br><br>
-            </form>
-            <button class="getData">Hanki lippu!</button><br>
-            <a href=ticketinfo.html id="info" target="_blank"><i class="fas fa-question-circle"></i></a>
-            <span class="infoText">Mistä hintamme muodostuu?</span>
-        </section>
-        <br>
-        <section>
-            <div class="ticketDisplay">
-                <h4>Hanki lippusi nyt!</h4>
-                <span class="ticketFirstName"></span>
-                <span class="ticketLastName"></span>
-                <p>Hinta: <span class="priceCategory"></span></p>
-            </div>
-        </section>
-    </main>
-        <footer>&copy; Mustonen</footer>
+        <div class="contentWrap">
+            <header>
+                <h1>Maatalousnäyttely</h1>
+            </header>
+            <h3>04.07.2019 | Taipalsaari</h3>
+            <main>
+                <section>
+                    <form id="ticketForm">
+                        <h4>Täytä lipun tiedot</h4>
+                        <div class="boxContainer">
+                            <input type="checkbox" id="MTKmember" name="MTKmember" onclick="boxControl()"><label
+                                for="MTKmember">MTK:n jäsen</label><br>
+                            <input type="checkbox" id="conscript" name="conscript" onclick="boxControl()"><label
+                                for="conscript">Varusmies</label><br>
+                            <input type="checkbox" id="student" name="student" onclick="boxControl()"><label
+                                for="student">Opiskelija</label>
+                        </div>
+                        <p class="fieldName">Etunimi</p><input id="firstName" type="text"><br>
+                        <p class="fieldName">Sukunimi</p><input id="lastName" type="text"><br>
+                        <p class="fieldName">Ikä</p><input id="age" type="number"><br>
+                        <p class="fieldName">Sähköposti</p><input id="email" type="text"><br><br>
+                    </form>
+                    <button class="getData">Hanki lippu!</button><br><br>
+                    <a href=ticketinfo.html id="info"><i class="fas fa-question-circle fa-fw"></i><span
+                            class="infoText">Mistä hintamme muodostuu?</span></a>
+                    <br>
+                    <a href=eventinfo.html id="eventinfo"><i class="fas fa-info-circle fa-fw"></i><span
+                            class="infoText">Tietoa tapahtumasta</span></a>
+                </section>
+                <section>
+                    <div class="ticketDisplay">
+                        <h4>Hanki lippusi nyt!</h4>
+                        <span class="ticketFirstName"></span>
+                        <span class="ticketLastName"></span>
+                        <p>Hinta: <span class="priceCategory"></span></p>
+                    </div>
+                </section>
+            </main>
         </div>
+        <footer>&copy; Mustonen</footer>
     </div>
     <script src="../ticketsales/ticketsales.js"></script>
 </body>
