@@ -16,13 +16,13 @@
 
 <body>
     <div class="allContainer">
+        <div class="footerContainer">
     <header><h1>Maatalousnäyttely</h1></header>
     <h3>04.07.2019 | Taipalsaari</h3>
     <main>
         <section>
             <form id="ticketForm">
-                <h4>Lipun tiedot</h4>
-                <p class="fieldName">Olen..</p>
+                <h4>Täytä lipun tiedot</h4>
                 <div class="boxContainer">
                     <input type="checkbox" id="MTKmember" name="MTKmember" onclick="boxControl()"><label for="MTKmember">MTK:n jäsen</label>
                     <input type="checkbox" id="conscript" name="conscript" onclick="boxControl()"><label for="conscript">Varusmies</label>
@@ -33,8 +33,9 @@
                 <p class="fieldName">Ikä</p><input id="age" type="number"><br>
                 <p class="fieldName">Sähköposti</p><input id="email" type="text"><br><br>
             </form>
-            <button class="getData">Hanki lippu!</button>
-            <button class="info"><i class="fas fa-question"></i></button>
+            <button class="getData">Hanki lippu!</button><br>
+            <a href=ticketinfo.html id="info" target="_blank"><i class="fas fa-question-circle"></i></a>
+            <span class="infoText">Mistä hintamme muodostuu?</span>
         </section>
         <br>
         <section>
@@ -46,7 +47,8 @@
             </div>
         </section>
     </main>
-    <footer>&copy; Mustonen</footer>
+        <footer>&copy; Mustonen</footer>
+        </div>
     </div>
     <script src="../ticketsales/ticketsales.js"></script>
 </body>
