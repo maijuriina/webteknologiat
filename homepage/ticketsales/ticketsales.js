@@ -10,12 +10,6 @@ let finalPrice;
 let ageFinalPrice;
 let statusFinalPrice;
 
-// fires functions on click of checkboxes
-function checkBoxListener () {
-    $("#student").click(boxControl);
-    $("#conscript").click(boxControl);
-};
-
 // disables conscript or student checkbox if one of the other is checked
 function boxControl () {
     if (!$("#student").prop("checked")) {
