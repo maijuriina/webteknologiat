@@ -176,3 +176,11 @@ input[type=submit] {
     border-left: 2px solid #c83771;
     cursor: pointer;
 }
+
+#slideshow #currentImg {
+    max-width: 80vw;
+}
+
+.pictureContainer .pictureGrid .catPic {
+    max-width: 80vw;
+}
